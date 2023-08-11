@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Text on Button Click</title>
+  <script>
+    function displayText() {
+      // Get the DOM element
+      var displayElement = document.getElementById('display');
+
+      // Update the text content
+      displayElement.textContent = 'Text to display';
+    }
+  </script>
+</head>
+<body>
+  <button onclick="displayText()">Click Me</button>
+  <div id="display"></div>
+</body>
+</html>
