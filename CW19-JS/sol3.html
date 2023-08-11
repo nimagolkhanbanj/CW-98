@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Greeting</title>
+</head>
+
+<body>
+    <input type="text" id="username" placeholder="Enter">
+    <button onclick="store()">Store Username</button>
+    <button onclick="greeting()">Greet User</button>
+
+    <script>
+        function store() {
+            const username = document.getElementById('username').value;
+            document.cookie = 'username=' + username + ';';
+            alert('Username stored!');
+        }
+
+        function greeting() {
+            const cookieValue = document.cookie.split('; ').find(row => row.startsWith('username='));
+            if (cookieValue) {
+                const username = cookieValue.split('=')[1];
+                alert('Hello, ' + username + '!');
+            } else {
+                alert('Username not found in the cookie.');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
