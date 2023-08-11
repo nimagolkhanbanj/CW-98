@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    function showInputType() {
+
+    var userInput = prompt("مقداری را وارد کنید:");
+
+          if (isNaN(parseFloat(userInput))) {
+
+               var inputType = "string";}
+
+         else {
+
+            if (Number(userInput) === parseFloat(userInput)) {
+                var inputType = "float"; }
+            
+            else {
+               var inputType = "integer";
+        }
+      }
+    
+          // نوع را با استفاده از یک هشدار نمایش دهید
+          alert("enter type is : " + inputType);
+    
+          // مقدار ورودی را در المان با شناسه "result" نمایش دهید
+          document.getElementById("result").innerHTML = "مقدار ورودی: " + userInput;
+        }
+
+      </script>
+
+      <h1>نمایش نوع ورودی</h1>
+      <button onclick="showInputType()">نمایش نوع ورودی</button>
+      <p id="result"></p>
+
+</body>
+</html>
