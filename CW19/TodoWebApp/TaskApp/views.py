@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .models import Task, Tag, Category
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+
 from .mixin import TodoOwnerRequiredMixin as TORM
+
 # Create your views here.
 def all_task(request):
     all_task = Task.objects.all()
